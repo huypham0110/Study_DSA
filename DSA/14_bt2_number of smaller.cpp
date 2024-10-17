@@ -8,7 +8,7 @@
 
 using namespace std;
 
-//Bai toan: Merging arrays (Gop hai mang) 
+//Bai toan: Number of smaller. Voi moi phan tu trong mang hai, tim so luong phan tu o mang thu nhat nho hon no
 
 //Input: Hai day tang dan
 //
@@ -26,22 +26,18 @@ int main() {
 	for (int i = 0; i < m; i++) cin >> b[i];
 
 	int i = 0, j = 0;
+
 	while (i < n && j < m) {
-		if (a[i] <= b[j]) {
-			cout << a[i] << ' ';
+		if (a[i] < b[j]) {
 			i++;
 		}
 		else {
-			cout << b[j] << ' ';
+			cout << i << ' ';
 			j++;
 		}
 	}
-	while (i < n) {
-		cout << a[i] << ' ';
-		i++;
-	}
 	while (j < m) {
-		cout << b[j] << ' ';
+		cout << n << ' ';
 		j++;
 	}
 }
